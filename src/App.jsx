@@ -63,7 +63,7 @@ export default function Game() {
   const [gameOver, setGameOver] = useState(false); 
 
   useEffect(() => {
-    const initialBoard = utils.initializeBoard();
+    let initialBoard = utils.initializeBoard();
     // Manually place some tiles for initial testing display, actually, may be include addRandomTile() inside initializeBoard() and remove this.
     /*initialBoard[0][0] = 2;
     initialBoard[0][1] = 2;
@@ -71,8 +71,8 @@ export default function Game() {
     initialBoard[2][3] = 16;*/
 
     //randomly place 2 tiles on the board
-    utils.addRandomTile(initialBoard);
-    utils.addRandomTile(initialBoard);
+    initialBoard = utils.addRandomTile(initialBoard);
+    initialBoard = utils.addRandomTile(initialBoard);
     setBoard(initialBoard);
   }, []);
 
