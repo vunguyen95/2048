@@ -150,8 +150,8 @@ export default function Game() {
   const handleRestart = () => {
     let freshBoard = utils.initializeBoard();
     /* add random titles */
-    utils.addRandomTile(freshBoard);
-    utils.addRandomTile(freshBoard);
+    freshBoard = utils.addRandomTile(freshBoard);
+    freshBoard = utils.addRandomTile(freshBoard);
     setBoard(freshBoard);
     setScore(0);
     setGameOver(false);
